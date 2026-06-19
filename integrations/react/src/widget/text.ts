@@ -3,7 +3,7 @@ import {
 	RpcMessageFontStyle,
 	RpcMessageText,
 	type RpcMessageWidget,
-} from "poly/rpc"
+} from "@poly-gui/core/rpc"
 import { Widget } from "../widget.js"
 import type { FontStyle } from "./font-style.js"
 import { createReactElement } from "./react.js"
