@@ -47,7 +47,7 @@ var PackageJSON = templateFile{
   },
   "dependencies": {
     {{- if .DebugWorkspacePath}}
-    "@poly-gui/core": "file:{{.DebugWorkspacePath}}/sdks/typescript/core"
+    "@poly-gui/core": "link:{{.DebugWorkspacePath}}/sdks/typescript/core"
     {{- else}}
     "@poly-gui/core": "0.1.0"
     {{- end}}

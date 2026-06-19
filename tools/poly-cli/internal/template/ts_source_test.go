@@ -41,7 +41,7 @@ func TestPackageJSONUsesLocalCorePackageInDebugMode(t *testing.T) {
 	}
 
 	content := readGeneratedPackageJSON(t, dir)
-	expected := `"@poly-gui/core": "file:` + workspacePath + `/sdks/typescript/core"`
+	expected := `"@poly-gui/core": "link:` + workspacePath + `/sdks/typescript/core"`
 	if !strings.Contains(content, expected) {
 		t.Fatalf("expected local @poly-gui/core dependency %q, got:\n%s", expected, content)
 	}

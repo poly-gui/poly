@@ -72,6 +72,8 @@ const hostConfig: HostConfig<
 				instance = new ColumnWidget(hostContext, widgetTag, colProps)
 				break
 			}
+			default:
+				throw new Error(`Unsupported widget type: ${type}`)
 		}
 
 		return instance
@@ -196,7 +198,7 @@ const hostConfig: HostConfig<
 
 	preparePortalMount(containerInfo): void {},
 
-	scheduleTimeout(fn, delay): Timer {
+	scheduleTimeout(fn, delay): ReturnType<typeof setTimeout> {
 		return setTimeout(fn, delay)
 	},
 

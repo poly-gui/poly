@@ -15,8 +15,7 @@
 	},
 	"scripts": {
 		"build": "tsc -p tsconfig.build.json",
-		"nanoc": "nanoc --language=ts --basedir=../../../protocol/rpc --outdir=src/rpc",
-		"prepare": "tsc -p tsconfig.build.json"
+		"nanoc": "nanoc --language=ts --basedir=../../../protocol/rpc --outdir=src/rpc"
 	},
 	"keywords": [],
 	"author": "",
