@@ -5,7 +5,7 @@ description: A guide in building a counter app in TypeScript
 
 After [creating a new Poly project](/guides/creating-project),
 let's create a counter app as a gentle introduction to Poly.
-In this guide, we will use [TypeScript](https://www.typescriptlang.org) to create the app, using the `@poly-gui/core` and `@poly-gui/widgets` TypeScript libraries.
+In this guide, we will use [TypeScript](https://www.typescriptlang.org) to create the app, using the `@poly-gui/core` TypeScript library.
 
 ## The Main File
 
@@ -91,7 +91,7 @@ Let's define a class called `CounterScreen` that encapsulates the UI code and th
 ```ts
 // src/counter-screen.ts
 import { type ApplicationContext } from "poly/application"
-import { type Widget, WidgetController } from "@poly-gui/widgets"
+import { type Widget, WidgetController } from "@poly-gui/core/widget"
 
 class CounterScreen extends WidgetController {
   constructor(context: ApplicationContext) {
@@ -108,7 +108,7 @@ In this case, `CounterScreen` will hold a reference to the counter text label be
 
 ### Defining the UI tree
 
-`@poly-gui/widgets` exports a variety of widgets that can be composed together to form the UI.
+`@poly-gui/core/widget` exports a variety of widgets that can be composed together to form the UI.
 Let's first create a `Text` to display the current count.
 
 ```ts ins={4-5, 9, 11, 16-17}
@@ -117,7 +117,7 @@ import { type ApplicationContext } from "poly/application"
 import {
   type Widget,
   Text,
-} from "@poly-gui/widgets"
+} from "@poly-gui/core/widget"
 
 class CounterScreen extends WidgetController {
   private count = 0
@@ -153,7 +153,7 @@ import {
   type PolyWidget,
   Text,
   Button,
-} from "@poly-gui/widgets"
+} from "@poly-gui/core/widget"
 
 class CounterScreen extends WidgetController {
   private count = 0
@@ -197,7 +197,7 @@ import {
   Text,
   Button,
   Column,
-} from "@poly-gui/widgets"
+} from "@poly-gui/core/widget"
 
 class CounterScreen extends WidgetController {
   private count = 0
@@ -247,7 +247,7 @@ import {
   Text,
   Button,
   Column,
-} from "@poly-gui/widgets"
+} from "@poly-gui/core/widget"
 
 class CounterScreen extends WidgetController {
   private count = 0
@@ -301,7 +301,7 @@ import {
   Text,
   Button,
   Column,
-} from "@poly-gui/widgets"
+} from "@poly-gui/core/widget"
 
 class CounterScreen extends WidgetController {
   private count = 0

@@ -25,7 +25,6 @@ NanoPack is a separate project. Poly depends on NanoPack for serialization and c
 | `runtimes/gtk` | GTK native runtime |
 | `runtimes/swift` | Swift/AppKit native runtime |
 | `sdks/typescript/core` | `@poly-gui/core` portable TypeScript SDK |
-| `sdks/typescript/widgets` | `@poly-gui/widgets` TypeScript widget helpers |
 | `integrations/react` | `@poly-gui/react` React integration |
 | `libs/twx` | Shared Tailwind-style class parser |
 | `tools/poly-cli` | Poly CLI |
