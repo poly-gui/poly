@@ -1,0 +1,4 @@
+Button::Widget:
+  text: string
+  onClick: uint32
+

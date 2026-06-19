@@ -1,0 +1,8 @@
+ListView::Widget:
+  width: double
+  height: double
+  sections: uint32[]
+  itemHeight: double
+  onCreate: uint32
+  onBind: uint32
+

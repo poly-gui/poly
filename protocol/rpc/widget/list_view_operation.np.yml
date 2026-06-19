@@ -1,0 +1,3 @@
+ListViewOperation:
+  # unused field, this message is only used for grouping different types of list operations.
+  tag: uint32

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "3d2dc41a01f9e49d84f0a3925fb858bed64f702d",
+        "version" : "1.1.2"
+      }
+    },
+    {
+      "identity" : "swift-nanopack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/poly-gui/swift-nanopack",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2a1feddeb102a9c55a28300160b86ebdc2bbe3af"
+      }
+    }
+  ],
+  "version" : 2
+}

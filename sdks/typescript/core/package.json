@@ -1,0 +1,52 @@
+{
+	"name": "@poly-gui/core",
+	"version": "0.1.0",
+	"type": "module",
+	"files": ["dist", "LICENSE", "README.md", "package.json"],
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./application": {
+			"import": "./dist/application.js",
+			"types": "./dist/application.d.ts"
+		},
+		"./bridge": {
+			"import": "./dist/bridge/bridge.js",
+			"types": "./dist/bridge/bridge.d.ts"
+		},
+		"./widget": {
+			"import": "./dist/widget/index.js",
+			"types": "./dist/widget/index.d.ts"
+		},
+		"./rpc/*.js": {
+			"import": "./dist/rpc/*.js",
+			"types": "./dist/rpc/*.d.ts"
+		},
+		"./rpc": {
+			"import": "./dist/rpc.js",
+			"types": "./dist/rpc.d.ts"
+		},
+		"./rpc.js": {
+			"import": "./dist/rpc.js",
+			"types": "./dist/rpc.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"nanoc": "nanoc --language=ts --basedir=../../../protocol/rpc --factory-out=. --outdir=src/rpc",
+		"prepare": "tsc -p tsconfig.build.json"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"bun-types": "latest"
+	},
+	"dependencies": {
+		"nanopack": "github:nanopack-buffer/ts-nanopack"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"trustedDependencies": ["nanopack"]
+}

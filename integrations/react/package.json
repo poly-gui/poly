@@ -1,0 +1,31 @@
+{
+	"name": "@poly-gui/react",
+	"module": "src/index.ts",
+	"type": "module",
+	"files": ["dist", "LICENSE", "README.md", "package.json"],
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"@types/bun": "latest",
+		"@types/react": "^18.3.4",
+		"@types/react-reconciler": "^0.28.8",
+		"@poly-gui/core": "workspace:*",
+		"react": "^18.3.1"
+	},
+	"peerDependencies": {
+		"@poly-gui/core": "0.1.0",
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"nanopack": "github:poly-gui/ts-nanopack#main",
+		"react-reconciler": "^0.29.2"
+	}
+}

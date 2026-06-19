@@ -1,0 +1,20 @@
+service NativeLayer:
+  fn create_window(title string, description string, width int32, height int32, tag string):
+
+  fn create_widget(widget Widget, windowTag string):
+
+  fn append_new_widget(child Widget, parentTag uint32):
+
+  fn update_widget(tag uint32, widget Widget, args message?):
+
+  fn update_widgets(tag uint32[], widgets Widget[], args message?):
+
+  fn remove_widget(tag uint32):
+
+  fn insert_widget_before(widget Widget, beforeWidget Widget, parentTag uint32):
+
+  fn clear_window(windowTag string):
+
+  fn show_attached_dialog(title string, message string, windowTag string):
+
+  fn show_dialog(title string, message string):

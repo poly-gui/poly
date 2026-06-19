@@ -1,0 +1,25 @@
+name: Build xcframework
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-xcframework:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@4
+
+      - name: configure cmake
+        run: cmake -B${{ github.workspace }} -S${{ github.workspace }}
+
+      - name: build
+        run: cmake --build ${{ github.workspace }}/build --config Release
+
+      - name: create xcframework
+        run: xcodebuild -create-xcframework -library ${{ github.workspace }}/build/libtwx.a -headers ${{ github.workspace }}/include/twx -output ${{ github.workspace }}/build/twx.xcframework
+

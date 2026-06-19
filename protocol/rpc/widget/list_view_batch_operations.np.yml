@@ -1,0 +1,3 @@
+ListViewBatchOperations:
+  operations: ListViewOperation[]
+
