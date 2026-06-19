@@ -140,7 +140,7 @@ func parseFromArgs() (*poly.ProjectDescription, error) {
 		return nil, err
 	}
 
-	flag.StringVar(&debugWorkspacePath, "debug-workspace", "", "Path to a local Poly monorepo. When set, generated TypeScript projects depend on local packages from that checkout.")
+	flag.StringVar(&debugWorkspacePath, "debug-workspace", "", "Path to a local Poly monorepo. When set, generated projects depend on local packages from that checkout.")
 	flag.StringVar(&outputPath, "output", cwd, "Where the project should be created in. Defaults to the current working directory.")
 	flag.StringVar(&projectName, "name", defaultProjectName, "The name for the application. Default is "+defaultProjectName+".")
 	flag.StringVar(&packageName, "package", defaultPackageName, "The package name/bundle ID for the application. Default is "+defaultPackageName+".")
