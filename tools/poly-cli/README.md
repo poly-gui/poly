@@ -60,6 +60,7 @@ flags are available:
 | `--output`  |                      The directory in which the project directory should be created. Defaults to the current working directory.                       |
 |  `--name`   |                                                  The name of the application. Defaults to "PolyApp"                                                   |
 | `--package` | The package name/bundle identifier/application ID of the application. This typically uses the reverse domain name notation. Defaults to "org.polygui" |
+| `--debug-workspace` | Path to a local Poly monorepo. Generated projects will use its local `@poly-gui/core` package and Swift runtime. |
 
 ### Examples
 

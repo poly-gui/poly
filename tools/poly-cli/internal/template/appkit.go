@@ -13,7 +13,7 @@ options:
 packages:
   PolyNative:
     {{- if .DebugWorkspacePath}}
-    path: {{.DebugWorkspacePath}}/PolyNativeSwift
+    path: {{.DebugWorkspacePath}}/runtimes/swift
     {{- else}}
     url: https://github.com/poly-gui/swift-poly-native
     branch: main
@@ -32,7 +32,7 @@ targets:
       - script: |
           mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
           {{- if .DebugWorkspacePath}}
-          rm "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bundle"
+          rm -f "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bundle"
           ln -s "${SRCROOT}/../build/bundle" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bundle"
           {{- else}}
           cp "${SRCROOT}/../build/bundle" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bundle"
